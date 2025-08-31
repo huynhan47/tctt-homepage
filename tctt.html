@@ -2946,8 +2946,55 @@ document.addEventListener('DOMContentLoaded', function () {
 				
 <div class="component component-greeting col-12" data-attribute="[{&quot;minHour&quot;:5,&quot;maxHour&quot;:11,&quot;greetTxt&quot;:&quot;&lt;h1&gt;Thời Của Tiểu Thương - Ch&amp;#224;o buổi s&amp;#225;ng&lt;/h1&gt;&lt;p&gt;App Mobile Thời Của Tiểu Thương gi&amp;#250;p kết nối người bu&amp;#244;n b&amp;#225;n nhỏ để trao đổi h&amp;#224;ng h&amp;#243;a, kh&amp;#244;ng th&amp;#244;ng qua tiền mặt, gi&amp;#250;p tăng doanh thu&lt;/p&gt;&quot;,&quot;emoji&quot;:&quot;&lt;img src=&#39;./tctt/im_80_morning.svg?h=2700&amp;w=4800&amp;ts=20230606064806&amp;hash=18B7916822C3621B4B41B887DF69FE3E&#39; alt=&#39;&#39;&gt;&quot;},{&quot;minHour&quot;:12,&quot;maxHour&quot;:17,&quot;greetTxt&quot;:&quot;&lt;h1&gt;Thời Của Tiểu Thương - Ch&amp;#224;o buổi chiều&lt;/h1&gt;&lt;p&gt;App Mobile Thời Của Tiểu Thương gi&amp;#250;p kết nối người bu&amp;#244;n b&amp;#225;n nhỏ để trao đổi h&amp;#224;ng h&amp;#243;a, kh&amp;#244;ng th&amp;#244;ng qua tiền mặt, gi&amp;#250;p tăng doanh thu&lt;/p&gt;&quot;,&quot;emoji&quot;:&quot;&lt;img src=&#39;./tctt/im_80_afternoon.svg?h=2700&amp;w=4800&amp;ts=20230606064730&amp;hash=D90F2771A28B1DA72DC84AE077C0BEF3&#39; alt=&#39;&#39;&gt;&quot;},{&quot;minHour&quot;:18,&quot;maxHour&quot;:4,&quot;greetTxt&quot;:&quot;&lt;h1&gt;Thời Của Tiểu Thương - Ch&amp;#224;o buổi tối&lt;/h1&gt;&lt;p&gt;App Mobile Thời Của Tiểu Thương gi&amp;#250;p kết nối người bu&amp;#244;n b&amp;#225;n nhỏ để trao đổi h&amp;#224;ng h&amp;#243;a, kh&amp;#244;ng th&amp;#244;ng qua tiền mặt, gi&amp;#250;p tăng doanh thu&lt;/p&gt;&quot;,&quot;emoji&quot;:&quot;&lt;img src=&#39;./tctt/im_80_evening.svg?h=2700&amp;w=4800&amp;ts=20230606064759&amp;hash=4D0D0B7C7228899641C842546C3E9AF7&#39; alt=&#39;&#39;&gt;&quot;}]">
 
-			<div class="component-content">
-				<div class="greeting">
+			<div class="component-content" style="display: flex; align-items: flex-end; gap: 40px;">
+				<!-- QR Code Popup -->
+				<div id="qr-popup" style="
+					position: relative;
+					flex-shrink: 0;
+					background: linear-gradient(145deg, #ffffff, #f8f9fa); 
+					border-radius: 16px; 
+					box-shadow: 
+						0 4px 16px rgba(0,0,0,0.1),
+						0 1px 4px rgba(0,0,0,0.06);
+					padding: 20px; 
+					padding-top: 92px;
+					display: flex; 
+					flex-direction: column; 
+					align-items: center; 
+					width: fit-content;
+					max-width: 240px;
+					border: 1px solid rgba(255,255,255,0.3);
+				">
+					<!-- Logo nửa trong nửa ngoài -->
+					<img src="./tctt/tctt_logo.svg" alt="TCTT Logo" style="
+						position: absolute; 
+						top: -72px; 
+						left: 50%; 
+						transform: translateX(-50%); 
+						width: 144px; 
+						height: 144px; 
+						/* box-shadow: 0 4px 12px rgba(0,0,0,0.15);  */
+						z-index: 10;
+					" />
+					<div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+						<div style="width: 96px; height: 96px;">
+							<img src="https://api.qrserver.com/v1/create-qr-code/?size=96x96&data=http://127.0.0.1:5500/download.html" alt="QR Code" width="96" height="96" style="
+								border-radius: 12px; 
+								border: 1px solid rgba(255,255,255,0.8);
+								box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+							" />
+						</div>
+						<div style="display: flex; flex-direction: column; gap: 6px; align-items: center;">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="CH Play" style="height: 24px; width: auto;" />
+							<img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="App Store" style="height: 24px; width: auto;" />
+						</div>
+						<div style="font-size: 12px; color: #333; text-align: center; font-weight: 500;">
+							Quét mã để tải ứng dụng<br>
+							<span style="font-size: 10px; color: #666;">CH Play hoặc App Store</span>
+						</div>
+					</div>
+				</div>
+				<div class="greeting" style="flex: 1;">
 					<div class="greeting__emoji  mb-2 mb-lg-0">
 						<picture data-attribute="day_session_icon" style="display: inline;"><img src="./tctt/im_80_evening.svg" alt=""></picture>
 					</div>
@@ -2958,14 +3005,6 @@ document.addEventListener('DOMContentLoaded', function () {
 				</div>
 			</div>
 </div>
-		<div class="component" ischecked="isChecked" placeholder="Thẻ tín dụng, vay tiêu dùng,...">
-			<div class="component-content">
-				<div class="home-search mt-5 mt-lg-4" data-bs-toggle="modal" data-bs-target="#searchModal">
-					<span class="icon-search"></span>
-					<input type="email" readonly="" class="form-control" id="home-search" placeholder="Thẻ tín dụng, vay tiêu dùng,...">
-				</div>
-			</div>
-		</div>
 
 
 			</div>
