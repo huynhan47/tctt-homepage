@@ -8,9 +8,9 @@
 
 
 
-    <title>Vietcombank | Ngân hàng TMCP Ngoại thương Việt Nam</title>
+    <title>Thời Của Tiểu Thương</title>
 
-    <link href="https://www.vietcombank.com.vn/-/media/Default-Website/Default-Images/Icons/favicon.ico?ts=00010101000000" rel="shortcut icon">
+    <link href="./tctt/tctt_logo.svg" rel="shortcut icon">
 
 
 
@@ -68,6 +68,8 @@ document.addEventListener('DOMContentLoaded', function () {
   }
   /* Override common hide utility */
   .d-none.picture-day-session, picture[data-attribute="day_session_icon"].d-none, .greeting__emoji .d-none { display: inline-block !important; }
+  /* Hide the entire home-suggestion component */
+  .component.home-suggestion { display: none !important; }
 </style>
 
 <div class="component megamenu mega-menu-popup navigation-title mega-menu-popup__overflowY" style=""><div class="component-content"><div class="types-list-mobile for-personal">
@@ -94,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         <img src="./tctt/nh ch ti chnh.svg" alt="Trang Quản trị">
                         <label class="type-item__name">Trang Quản trị</label>
                         
-                    </a><a class="type-item for-contact no-desc" href="#contact">
+                    </a><a class="type-item for-contact no-desc" href="sales-framework.html">
                         <img src="./tctt/KHCN.svg" alt="Trang Liên Hệ">
                         <label class="type-item__name">Trang Liên Hệ</label>
                         
@@ -2722,10 +2724,10 @@ document.addEventListener('DOMContentLoaded', function () {
             
         
       </div>
-      <button><img src="./tctt/box-arrow-in-right.svg" alt=""><span>Đăng nhập</span></button>
+      <button style="display: none;"><img src="./tctt/box-arrow-in-right.svg" alt=""><span>Đăng nhập</span></button>
   </div>						</li>
-		</ul>
-	</div>
+    </ul>
+  </div>
 </div>
 
         </div>
@@ -2978,7 +2980,7 @@ document.addEventListener('DOMContentLoaded', function () {
 					" />
 					<div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
 						<div style="width: 96px; height: 96px;">
-							<img src="https://api.qrserver.com/v1/create-qr-code/?size=96x96&data=http://127.0.0.1:5500/download.html" alt="QR Code" width="96" height="96" style="
+							<img src="https://api.qrserver.com/v1/create-qr-code/?size=96x96&data=https://thoicuatieuthuong.com/download.html" alt="QR Code" width="96" height="96" style="
 								border-radius: 12px; 
 								border: 1px solid rgba(255,255,255,0.8);
 								box-shadow: 0 2px 8px rgba(0,0,0,0.1);

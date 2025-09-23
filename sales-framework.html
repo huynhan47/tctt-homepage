@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khung Sườn Thực Thi Đơn Hàng Sale - TCTT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            padding: 40px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2a5298;
+        }
+        .step-card {
+            background: #f8f9fa;
+            border-left: 5px solid #2a5298;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+        .step-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .step-number {
+            background: #2a5298;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .step-title {
+            color: #2a5298;
+            font-weight: bold;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+        .step-content ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .step-content li {
+            margin-bottom: 8px;
+            color: #555;
+            line-height: 1.6;
+        }
+        .commission-card {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        .commission-item {
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+            color: #2a5298;
+        }
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255,255,255,0.9);
+            border: none;
+            color: #2a5298;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        .back-btn:hover {
+            background: white;
+            color: #2a5298;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Quay lại trang chủ
+    </a>
+    
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-chart-line icon"></i>Khung Sườn Thực Thi Đơn Hàng Sale</h1>
+            <p class="lead">Hướng dẫn chi tiết cho đội ngũ Sale tiếp cận tiểu thương</p>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-title"><i class="fas fa-clipboard-check icon"></i>Chuẩn bị trước khi đi thị trường</div>
+            <div class="step-content">
+                <ul>
+                    <li>Nắm rõ sản phẩm, lợi ích và cách giải thích đơn giản cho tiểu thương</li>
+                    <li>Chuẩn bị công cụ: tờ rơi, QR tải app, điện thoại demo, link giới thiệu</li>
+                    <li>Xác định nhóm tiểu thương mục tiêu trong khu vực</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-title"><i class="fas fa-handshake icon"></i>Tiếp cận tiểu thương</div>
+            <div class="step-content">
+                <ul>
+                    <li><strong>Tạo thiện cảm:</strong> chào hỏi, bắt chuyện tự nhiên</li>
+                    <li><strong>Khơi gợi nhu cầu:</strong> hỏi về vấn đề hàng tồn, chi phí, việc tìm nguồn hàng</li>
+                    <li><strong>Giới thiệu giải pháp:</strong> ứng dụng giúp kết nối, trao đổi hàng, giảm rủi ro</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">3</div>
+            <div class="step-title"><i class="fas fa-mobile-alt icon"></i>Thuyết phục & chốt việc cài app</div>
+            <div class="step-content">
+                <ul>
+                    <li><strong>Trình diễn nhanh:</strong> cho tiểu thương xem app ngay</li>
+                    <li><strong>Giải đáp thắc mắc:</strong> "Không mất phí", "Rất dễ sử dụng", "Nhiều tiểu thương khác đã tham gia"</li>
+                    <li><strong>Kêu gọi hành động:</strong> đề nghị cài tại chỗ</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">4</div>
+            <div class="step-title"><i class="fas fa-cog icon"></i>Hỗ trợ cài đặt tại chỗ</div>
+            <div class="step-content">
+                <ul>
+                    <li>Hướng dẫn tải app, tạo tài khoản, nhập thông tin cơ bản</li>
+                    <li>Hỗ trợ đăng thử một sản phẩm</li>
+                    <li>Xác nhận gian hàng của tiểu thương đã hoạt động</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">5</div>
+            <div class="step-title"><i class="fas fa-clipboard-list icon"></i>Nếu tiểu thương không cài app</div>
+            <div class="step-content">
+                <ul>
+                    <li>Vẫn giữ thái độ tích cực</li>
+                    <li><strong>Thu thập thông tin:</strong>
+                        <ul>
+                            <li>Tên tiểu thương</li>
+                            <li>Loại hàng kinh doanh</li>
+                            <li>Số điện thoại / địa chỉ sạp</li>
+                        </ul>
+                    </li>
+                    <li>Ghi lại vào hệ thống</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">6</div>
+            <div class="step-title"><i class="fas fa-check-circle icon"></i>Xác nhận & báo cáo đơn hàng</div>
+            <div class="step-content">
+                <ul>
+                    <li><strong>Với mỗi tiểu thương đã cài thành công:</strong> báo về hệ thống, chụp ảnh quầy (nếu cần)</li>
+                    <li><strong>Với mỗi tiểu thương chưa cài nhưng có thông tin đầy đủ:</strong> báo cáo để tính điểm thưởng</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="commission-card">
+            <h3><i class="fas fa-money-bill-wave"></i> Chính sách hoa hồng cho Sale</h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="commission-item">
+                        <h4>30.000 VND</h4>
+                        <p>1 tiểu thương cài thành công</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="commission-item">
+                        <h4>10.000 VND</h4>
+                        <p>1 tiểu thương chưa cài nhưng cung cấp đủ thông tin</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-3">
+                <h5>Nguyên tắc:</h5>
+                <ul class="text-start">
+                    <li>Ưu tiên khuyến khích tiểu thương cài tại chỗ (được nhiều hơn)</li>
+                    <li>Trường hợp chưa cài thì vẫn có dữ liệu để chăm sóc sau → không lãng phí công sức Sale</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="step-card">
+            <div class="step-number">8</div>
+            <div class="step-title"><i class="fas fa-heart icon"></i>Chăm sóc sau bán (follow-up)</div>
+            <div class="step-content">
+                <ul>
+                    <li>Gửi tin nhắn cảm ơn, kèm hướng dẫn</li>
+                    <li>Gọi lại sau 2–3 ngày để gợi ý sử dụng</li>
+                    <li>Đưa tiểu thương vào nhóm cộng đồng trao đổi hàng hóa</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h4><i class="fas fa-lightbulb"></i> Kết luận</h4>
+            <p><strong>Sale vừa có động lực (hoa hồng 30k/10k) vừa đảm bảo không bỏ sót tiểu thương nào, kể cả khi chưa cài app.</strong></p>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="download.html" class="btn btn-primary btn-lg" style="background: linear-gradient(135deg, #2a5298 0%, #667eea 100%); border: none; border-radius: 25px; padding: 15px 30px;">
+                <i class="fas fa-download"></i> Tải App TCTT
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
